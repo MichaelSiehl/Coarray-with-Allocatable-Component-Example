@@ -1,0 +1,3 @@
+To compile the example program with Intel ifort on Linux:
+
+ifort -coarray -coarray-num-images=2 NonSymmetricDemo.f90 Main.f90 -o a.out
