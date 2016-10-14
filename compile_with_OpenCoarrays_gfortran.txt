@@ -1,0 +1,12 @@
+Be aware: OpenCoarrays/gfortran may currently not support such non-symmetric coarrays.
+Thus, this may only work with upcomming versions of OpenCoarrays.
+
+To compile the example program with OpenCoarrays/GFortran on Linux:
+
+mpifort -fcoarray=lib -L/home/ms/OpenCoarrays/OpenCoarrays-1.3.8/src/mpi NonSymmetricDemo.f90 Main.f90 -lcaf_mpi -o a_gfortran.out
+
+(Here, -L/home/ms/OpenCoarrays/opencoarrays-1.0.1/src/mpi must be replaced by the actual path to your OpenCoarrays installation)
+
+To run the program:
+
+mpirun -np 2 ./a_gfortran.out
