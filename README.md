@@ -6,4 +6,4 @@ Derived type coarrays with allocatable (or pointer) components might be especial
 
 This repositories example code shows how to access the array bounds of such a non-symmetric coarray array member from a different coarray image using the LBOUND and UBOUND intrinsics.
 
-Because there's no way to get the allocation status of a derived type coarray's allocatable component from a remote image, one should track the allocation status on that remote image. I did expand the example with an AllocationStatus member. That way one can avoid nasty run-time errors when trying to access a non-allocated coarray component on a remote image.
+Because there's no way to get the allocation status of a derived type coarray's allocatable component from a remote image, one should track the allocation status on that remote image. I did expand the example with an AllocationStatus member. That way one can avoid nasty run-time errors when trying to access a non-allocated coarray component from a remote image.
