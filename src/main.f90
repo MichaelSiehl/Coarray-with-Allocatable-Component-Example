@@ -1,4 +1,4 @@
-https://github.com/MichaelSiehl/Coarray-with-Allocatable-Component-Example
+! https://github.com/MichaelSiehl/Coarray-with-Allocatable-Component-Example
 !***************************************************
 PROGRAM Main
 !
