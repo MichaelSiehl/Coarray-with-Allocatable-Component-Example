@@ -34,3 +34,19 @@ SUBROUTINE CopyToCoarrayMember (Coarray_Object, reaDataArray)
   !
 END SUBROUTINE CopyToCoarrayMember
 !**********************************************************
+
+!
+SUBROUTINE GetBoundsFromCoarrayMember (Coarray_Object, intImageNumber, intLowerBound, intUpperBound)
+  !
+  TYPE (NonSymmetricCoarray), CODIMENSION[*], INTENT (INOUT) :: Coarray_Object
+  INTEGER, INTENT (IN) :: intImageNumber
+  INTEGER, INTENT (OUT) :: intLowerBound
+  INTEGER, INTENT (OUT) :: intUpperBound
+  !
+    intLowerBound = LBOUND (Coarray_Object[intImageNumber] % reaDataArray, 1)
+    intUpperBound = UBOUND (Coarray_Object[intImageNumber] % reaDataArray, 1)
+  !
+END SUBROUTINE GetBoundsFromCoarrayMember
+!
+!*******
+END MODULE NonSymmetricDemo
