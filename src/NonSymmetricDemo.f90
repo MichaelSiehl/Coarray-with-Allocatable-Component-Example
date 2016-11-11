@@ -43,10 +43,16 @@ SUBROUTINE GetBoundsFromCoarrayMember (Coarray_Object, intImageNumber, intLowerB
   INTEGER, INTENT (OUT) :: intLowerBound
   INTEGER, INTENT (OUT) :: intUpperBound
   !
+  IF (Coarray_Object[intImageNumber] % logAllocationStatus) THEN
     intLowerBound = LBOUND (Coarray_Object[intImageNumber] % reaDataArray, 1)
     intUpperBound = UBOUND (Coarray_Object[intImageNumber] % reaDataArray, 1)
+  ELSE
+    intLowerBound = 1
+    intUpperBound = 0
+  END IF
   !
 END SUBROUTINE GetBoundsFromCoarrayMember
 !
 !*******
 END MODULE NonSymmetricDemo
+
