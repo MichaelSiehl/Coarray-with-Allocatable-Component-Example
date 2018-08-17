@@ -15,6 +15,9 @@ TYPE, PUBLIC :: NonSymmetricCoarray
   ! stores the Allocation Status of the reaDataArray member
   !*****
 END TYPE NonSymmetricCoarray
+!
+TYPE(NonSymmetricCoarray), PUBLIC, CODIMENSION[*], SAVE :: Coarray_Object
+!
 !__________________________________________________________
 !**********************************************************
 CONTAINS !*************************************************
