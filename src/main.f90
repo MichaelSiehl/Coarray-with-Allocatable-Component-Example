@@ -6,7 +6,6 @@ USE NonSymmetricDemo
 !
 IMPLICIT NONE
 REAL, ALLOCATABLE, DIMENSION (:) :: reaDataArray
-TYPE(NonSymmetricCoarray), CODIMENSION[*] :: Coarray_Object
 INTEGER intImageNumber
 INTEGER intLowerBound
 INTEGER intUpperBound
